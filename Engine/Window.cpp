@@ -90,7 +90,7 @@ void Window::init(HINSTANCE hInstance, LPCWSTR windowTitle, int width, int heigh
 
 }
 
-LRESULT WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
+LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 {
 	switch (iMsg)
 	{

@@ -10,11 +10,25 @@ class Window
 		HWND hWnd;
 		HINSTANCE hInstance;
 		bool isGameDone;
-		
+		static Window* window;
+
+		Window()
+		{
+
+		}
 	public:
-	
-		Window();
-		~Window();
+		
+		Window(Window &other) = delete;
+
+
+		static Window* getInstance()
+		{
+			if (window == nullptr)
+				window = new Window;
+
+			return window;
+		}
+		
 
 		void init( HINSTANCE hInstance, LPCWSTR windowTitle, int width, int height);
 
